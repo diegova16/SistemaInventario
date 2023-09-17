@@ -17,11 +17,14 @@ namespace SistemaInventario.AccesoDatos.Repositorio
 
         public ICategoriaRepositorio Categoria { get; private set; }
 
+        public IMarcaRepositorio Marca { get; private set; }
+
         public UnidadTrabajo(ApplicationDbContext bd)
         {
             _bd = bd;
             Bodega = new BodegaRepositorio(_bd);
             Categoria = new CategoriaRepositorio(_bd);
+            Marca = new MarcaRepositorio(_bd);
         }
 
         public void Dispose()
