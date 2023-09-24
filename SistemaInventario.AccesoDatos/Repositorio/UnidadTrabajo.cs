@@ -19,12 +19,15 @@ namespace SistemaInventario.AccesoDatos.Repositorio
 
         public IMarcaRepositorio Marca { get; private set; }
 
+        public IProductoRepositorio Producto { get; private set; }
+
         public UnidadTrabajo(ApplicationDbContext bd)
         {
             _bd = bd;
             Bodega = new BodegaRepositorio(_bd);
             Categoria = new CategoriaRepositorio(_bd);
             Marca = new MarcaRepositorio(_bd);
+            Producto = new ProductoRepositorio(_bd);
         }
 
         public void Dispose()
