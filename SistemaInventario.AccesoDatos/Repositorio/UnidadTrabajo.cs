@@ -30,7 +30,7 @@ namespace SistemaInventario.AccesoDatos.Repositorio
             Categoria = new CategoriaRepositorio(_bd);
             Marca = new MarcaRepositorio(_bd);
             Producto = new ProductoRepositorio(_bd);
-            UsuarioAplicacion = new UsuarioAplicacionRepositorio(_db);
+            UsuarioAplicacion = new UsuarioAplicacionRepositorio(_bd);
         }
 
         public void Dispose()
